@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Room0
+  m_EditorClassIdentifier: 
+  m_GroupName: Room0
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 42c5d7b38de2c9142b50012306cdf93d
+  m_SerializeEntries:
+  - m_GUID: d7777c1f180b59c41882c140a444cd26
+    m_Address: Assets/GameObjects/Rooms/Room0.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 79e624e6a8770a946afb866fd94b394b
+    m_Address: Assets/StarterAssets/Environment/Prefabs/Structure_Prefab.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8a7437817844dce4894b049de73b75f2
+    m_Address: Assets/StarterAssets/Environment/Prefabs/Ramp_Prefab.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 466621a4836aa504c87c15d88722d465
+    m_Address: Assets/StarterAssets/Environment/Prefabs/Stairs_200x100x200_Prefab.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 50a0925b0c22af146a2d15615f815a1c
+    m_Address: Assets/StarterAssets/Environment/Prefabs/Stairs_650_400_300_Prefab.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9eb847ab97b24024588682c8601254cf
+    m_Address: Assets/StarterAssets/Environment/Prefabs/Wall_Prefab.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: c11cda07c67393c46ac72d4c13ad4b20, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 198c35d6e204aa94c967ffc5b92899b3, type: 2}
+    - {fileID: 11400000, guid: c70324deb06116f49b0f6c63c5fe73ed, type: 2}

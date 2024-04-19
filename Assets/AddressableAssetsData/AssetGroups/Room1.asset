@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Room1
+  m_EditorClassIdentifier: 
+  m_GroupName: Room1
+  m_Data:
+    m_SerializedData: []
+  m_GUID: d254fd3de8c65694fa15bbdf00b10d58
+  m_SerializeEntries:
+  - m_GUID: 0478f719b20cbfd4b99c7a4ef20dab9b
+    m_Address: Assets/GameObjects/Rooms/Room1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5c4f8e71b68371049b492558483c6094
+    m_Address: Assets/GameObjects/BioBox/Textures/CrateOcclusion.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1e160257a81365946b7ed6d8a62b53a6
+    m_Address: Assets/GameObjects/BioBox/Textures/CrateNormal.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 86028f18a9cbbaa4493f68c66e7cf960
+    m_Address: Assets/GameObjects/BioBox/Textures/CrateMetallicSmoothness.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3768bf9f85523e747bedd6d5b2fff5ed
+    m_Address: Assets/GameObjects/BioBox/Textures/CrateEmission.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dc49773ae437968479cd24155de2aa15
+    m_Address: Assets/GameObjects/BioBox/Textures/CrateAlbedoTransparency.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 041fae348562cf844843556e33168cd4
+    m_Address: Assets/GameObjects/BioBox/Prefabs/Crate.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 21c0b22c279d3a94888afe0e7a8a5924
+    m_Address: Assets/GameObjects/BioBox/Meshes/CrateCollider.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6444fef9c9b06ce4abf7a4635d326a27
+    m_Address: Assets/GameObjects/BioBox/Meshes/Crate.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ffcca3be586446b418a36138bced6906
+    m_Address: Assets/GameObjects/BioBox/Materials/Crate.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2bc76fdcba5849648a469c7456b5b1a1
+    m_Address: Assets/QuestObjects/Rooms/Room0_DynamicContent.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: c11cda07c67393c46ac72d4c13ad4b20, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: e1a0e9dc244593947b3d7f13313e1742, type: 2}
+    - {fileID: 11400000, guid: c6c0021b745d11c44867c7884484d2c4, type: 2}
