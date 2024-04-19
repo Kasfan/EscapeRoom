@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: da6ec2890cc35534e854c148f04e9c1d
+  m_SerializeEntries:
+  - m_GUID: 7b846d8f536f007498c941069487ce81
+    m_Address: Assets/StarterAssets/Environment/Prefabs/Box_350x250x200_Prefab.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e5f4daf24146ee040b5a2d7a73b30aa0
+    m_Address: Assets/StarterAssets/Environment/Prefabs/Box_100x100x100_Prefab.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e5d7b87d422ee0f478ee09eb32e24f4e
+    m_Address: Assets/StarterAssets/Environment/Prefabs/Tunnel_Prefab.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 687dbafc2b84b2846b9a4a7a7dae2a7e
+    m_Address: Assets/StarterAssets/Environment/Prefabs/Box_350x250x300_Prefab.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 09aade0ecefd01e4b8f7661acf64f5c2
+    m_Address: Assets/StarterAssets/Environment/Prefabs/Environment_Prefab.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e49acfb543e244847b3017d0697e23fc
+    m_Address: Assets/GameObjects/Rooms/Corridor.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9fe31dc458382694fa146b9020611291
+    m_Address: Assets/GameObjects/Door/Animations/Open.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6adcd567ddbe2b9438b06e4677740ec7
+    m_Address: Assets/GameObjects/Door/Animations/Closed.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c3489edf71d03224cb6667782efd790c
+    m_Address: Assets/GameObjects/Door/Animations/DoorAnimator.controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9908ca5a3ff8e52419de3e607498f123
+    m_Address: Assets/GameObjects/Door/Textures/Doors_Doors_Normal.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5af39a07a9252e94bb33984e5b0d8b8c
+    m_Address: Assets/GameObjects/Door/Textures/Doors_Doors_AlbedoTransparency.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 98d442ec7306cb24e82a0e572e2827a2
+    m_Address: Assets/GameObjects/Door/Textures/Doors_Doors_MetallicSmoothness.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2867113272e489c4688d26f34277aecb
+    m_Address: Assets/GameObjects/Door/Textures/Doors_Doors_AO.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7eac631add611d046ab010fccd81af5a
+    m_Address: Assets/GameObjects/Door/Sci Fi Gates Animated.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 22d2c44fed4ffa743aac7afe4d993905
+    m_Address: Assets/GameObjects/Door/Sci Fi Gates.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7474aa6baee1fc84ea7882a1a652b09c
+    m_Address: Assets/GameObjects/Door/Sci Fi Doors Mat.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 22d16106de073d04d8bca458a136e86e
+    m_Address: Assets/QuestObjects/Rooms/Room1_DynamicContent.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2bea7535993300245ae645255e049145
+    m_Address: Assets/QuestObjects/Rooms/End_DynamicContent.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: c11cda07c67393c46ac72d4c13ad4b20, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 351a813ea8bb4aa4daf5cc6e3177723d, type: 2}
+    - {fileID: 11400000, guid: b4ba4a6d712cce3479ec1a3485878f8b, type: 2}

@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Room3
+  m_EditorClassIdentifier: 
+  m_GroupName: Room3
+  m_Data:
+    m_SerializedData: []
+  m_GUID: b330fef0dec6dd44fb66cc75b265e963
+  m_SerializeEntries:
+  - m_GUID: d595846e13fb1cb4bb6ed37b43242b9c
+    m_Address: Assets/GameObjects/FuseBox/Textures/FuseboxOcclusion.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e9d2e5b2b7ec5a9458acebf66758774e
+    m_Address: Assets/GameObjects/FuseBox/Textures/FuseboxNormal.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 64e5da80287892046a0d8ee31172e3a6
+    m_Address: Assets/GameObjects/FuseBox/Textures/FuseboxMetallic.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b99d4eae51186fe4098dadc3b70f9ea2
+    m_Address: Assets/GameObjects/FuseBox/Textures/FuseboxBase.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e823a873e63743c4894c28c0a891f016
+    m_Address: Assets/GameObjects/FuseBox/Models/FuseObject.FBX
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5bfaf6b7d0928674cbb4e5f3a5e29083
+    m_Address: Assets/GameObjects/FuseBox/Models/Fusebox.FBX
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3a5b60aad7ea6b64b857c3bfc3c15738
+    m_Address: Assets/GameObjects/FuseBox/Materials/Fuse.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 333851e5eeaabb549b39529b910527ff
+    m_Address: Assets/GameObjects/Rooms/Room3.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c37d42a79786f404da7b7121498ab481
+    m_Address: Assets/QuestObjects/Rooms/Room3_DynamicContent.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: c11cda07c67393c46ac72d4c13ad4b20, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 19b2da8f3eb28aa4d9f9a92035f0c0d1, type: 2}
+    - {fileID: 11400000, guid: 93b0fddfce0e73d4898214270f2baffe, type: 2}
