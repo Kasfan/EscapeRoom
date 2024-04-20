@@ -95,20 +95,20 @@ namespace EscapeRoom.QuestLogic
         /// <inheritdoc/>
         public void Initialize()
         {
-            //var database = stateDatabase? (IStateDatabase)stateDatabase: EscapeRoomManager.Instance.StateDatabase;
-//
-            //// subscribe to the new provider and update value
-            //try
-            //{
-            //    stateProvider = database.GetStateProvider(targetStateId);
-            //    stateProvider.AddHandler(this);
-            //    currentValue = stateProvider.GetStateValue<T>();
-            //    Initialized = true;
-            //}
-            //catch (InvalidCastException e)
-            //{
-            //    Debug.LogError(e);
-            //}
+            var database = stateDatabase? (IStateDatabase)stateDatabase: EscapeRoomManager.Instance.StateDatabase;
+
+            // subscribe to the new provider and update value
+            try
+            {
+                stateProvider = database.GetStateProvider(targetStateId);
+                stateProvider.AddHandler(this);
+                currentValue = stateProvider.GetStateValue<T>();
+                Initialized = true;
+            }
+            catch (InvalidCastException e)
+            {
+                Debug.LogError(e);
+            }
         }
     }
 

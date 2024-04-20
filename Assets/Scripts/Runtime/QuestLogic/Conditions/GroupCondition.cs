@@ -7,6 +7,9 @@ namespace EscapeRoom.QuestLogic
 {
     /// <summary>
     /// Groups multiple conditions into one
+    /// <remarks>
+    /// If no nested conditions added, always returns false.
+    /// </remarks>
     /// </summary>
     [Serializable]
     public class GroupCondition: Condition, IInitializable, IDisposable
@@ -33,7 +36,8 @@ namespace EscapeRoom.QuestLogic
                     AllConditionsTrue(conditions) : 
                     AnyConditionTrue(conditions);
 
-                return invert ? !isTrue : isTrue;
+                isTrue = invert ? !isTrue : isTrue;
+                return isTrue;
             }
         }
 
@@ -49,10 +53,12 @@ namespace EscapeRoom.QuestLogic
         /// CTOR with parameters. Better use for unit tests
         /// </summary>
         /// <param name="all">If true - all conditions must be true to turn the group true, otherwise any will do</param>
+        /// <param name="invert">if group condition should be inverted</param>
         /// <param name="conditions">set of the conditions in the group</param>
-        public GroupCondition(bool all, List<ICondition> conditions)
+        public GroupCondition(bool all, bool invert, List<ICondition> conditions)
         {
             this.all = all;
+            this.invert = invert;
             this.conditions = conditions;
         }
 
@@ -85,18 +91,21 @@ namespace EscapeRoom.QuestLogic
         /// <returns>all true</returns>
         public static bool AllConditionsTrue(IEnumerable<ICondition> conditions)
         {
+            int counter = 0;
+
             foreach (var condition in conditions)
             {
-                if(condition.IsTrue)
+                counter++;
+                if (condition.IsTrue)
                     continue;
-                        
+
                 // if this condition is not true, then 'all' condition is not satisfied
                 return false;
             }
 
-            return true;
+            return true & counter > 0;
         }
-        
+
         /// <summary>
         /// Checks if any condition in the group is true
         /// </summary>
@@ -106,7 +115,7 @@ namespace EscapeRoom.QuestLogic
         {
             foreach (var condition in conditions)
             {
-                if(condition.IsTrue)
+                if(!condition.IsTrue)
                     continue;
                         
                 // if this condition is true, then 'any' condition is satisfied
