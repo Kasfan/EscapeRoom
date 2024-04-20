@@ -12,6 +12,11 @@ namespace EscapeRoom.QuestLogic
     public class EscapeRoomManager: MonoBehaviourSingletonPersistent<EscapeRoomManager>
     {
         [SerializeField]
+        [RequireInterface(typeof(IStateDatabase))]
+        [Tooltip("Global state database of the escape room")]
+        private Object stateDatabase;
+
+        [SerializeField]
         [RequireInterface(typeof(ISpawnPointProvider))]
         [Tooltip("Quest spawn points provider")]
         private Object spawnPointProvider;
@@ -19,6 +24,11 @@ namespace EscapeRoom.QuestLogic
         [field: SerializeField] 
         [Tooltip("Camera that attaches to local player")]
         public PlayerCamera PlayerCamera { get; set; }
+        
+        /// <summary>
+        /// Database of the escape room states
+        /// </summary>
+        public IStateDatabase StateDatabase => (IStateDatabase)stateDatabase;
 
         /// <summary>
         /// Quest spawn points provider
