@@ -35,10 +35,10 @@ public class ServerPlayerMove : NetworkBehaviour
     void OnServerSpawnPlayer()
     {
         // this is done server side, so we have a single source of truth for our spawn point list
-        var spawnPoint = EscapeRoomManager.Instance.SpawnPointProvider.GetRandomPoint();
+        //var spawnPoint = EscapeRoomManager.Instance.SpawnPointProvider.GetRandomPoint();
         
-        transform.position = spawnPoint?.Position ?? Vector3.zero;
-        transform.rotation = spawnPoint?.Rotation ?? Quaternion.identity;
+        //transform.position = spawnPoint?.Position ?? Vector3.zero;
+        //transform.rotation = spawnPoint?.Rotation ?? Quaternion.identity;
 
         // A note specific to owner authority:
         // Side Note:  Specific to Owner Authoritative
