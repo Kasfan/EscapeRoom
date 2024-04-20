@@ -1,0 +1,18 @@
+{
+    "name": "DebugStart.EscapeRoom.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:316b765c158b400395ed26658f827343"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
