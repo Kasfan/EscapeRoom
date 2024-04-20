@@ -45,6 +45,16 @@ namespace EscapeRoom.QuestLogic
             }
         }
         
+        public StateCondition()
+        {
+            
+        }
+        
+        public StateCondition(IStateDatabase database, string stateId, T targetValue, bool invert)
+        {
+            
+        }
+
         /// <inheritdoc/>
         public void OnStateChanged(StateChangeArgs<T> args)
         {
