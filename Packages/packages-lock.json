@@ -7,13 +7,6 @@
       "dependencies": {},
       "url": "https://npm.pkg.jetbrains.space/public/p/jetbrains-gamedev/jetbrains-gamedev"
     },
-    "com.madsbangh.easybuttons": {
-      "version": "1.3.0",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://package.openupm.com"
-    },
     "com.nsubstitute.nsubstitute": {
       "version": "https://github.com/Kasfan/nsubstitute-unity3d.git",
       "depth": 0,

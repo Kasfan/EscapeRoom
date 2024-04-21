@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using EasyButtons;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Utilities.Internal;
 using Object = UnityEngine.Object;

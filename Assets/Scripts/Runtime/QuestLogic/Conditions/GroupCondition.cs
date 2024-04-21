@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using EasyButtons;
 using UnityEngine;
 
 namespace EscapeRoom.QuestLogic
@@ -134,7 +133,6 @@ namespace EscapeRoom.QuestLogic
         /// </summary>
         /// <param name="type"><see cref="ICondition"/></param>
         /// <exception cref="ArgumentException">if provided type does not implement <see cref="ICondition"/> inteface</exception>
-        [Button]
         public void AddCondition(Type type)
         {
             if (!typeof(ICondition).IsAssignableFrom(type))
