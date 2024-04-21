@@ -25,12 +25,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 413724162782222580}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6667456100690440035}
+  - {fileID: 8426649437693322887}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6290600445739874083
@@ -46,6 +47,163 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateProviders: []
+--- !u!1 &5306628589010644560
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8426649437693322887}
+  - component: {fileID: 164985850627113014}
+  - component: {fileID: 3773516317283836298}
+  - component: {fileID: 3341873079699692502}
+  m_Layer: 0
+  m_Name: DoorStates
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8426649437693322887
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5306628589010644560}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8640628693307562258}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &164985850627113014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5306628589010644560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaf51fa8a4fa4a5dac96fb359c2480b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <ID>k__BackingField: Room0_DoorsOpen
+  condition:
+    rid: 3383733212788555983
+  references:
+    version: 2
+    RefIds:
+    - rid: 3383733212788555983
+      type: {class: GroupCondition, ns: EscapeRoom.QuestLogic, asm: DebugStart.EscapeRoom}
+      data:
+        name: 
+        invert: 0
+        all: 1
+        conditions:
+        - rid: 3383733212788555987
+        - rid: 3383733212788555988
+        - rid: 3383733212788555989
+    - rid: 3383733212788555987
+      type: {class: CrystalSlot/CrystalSlotHasTargetColor, ns: EscapeRoom.QuestObjects, asm: DebugStart.EscapeRoom}
+      data:
+        name: Red has red
+        invert: 0
+        dropZone: {fileID: 0}
+        targetColor: 0
+    - rid: 3383733212788555988
+      type: {class: CrystalSlot/CrystalSlotHasTargetColor, ns: EscapeRoom.QuestObjects, asm: DebugStart.EscapeRoom}
+      data:
+        name: Green has green
+        invert: 0
+        dropZone: {fileID: 0}
+        targetColor: 1
+    - rid: 3383733212788555989
+      type: {class: CrystalSlot/CrystalSlotHasTargetColor, ns: EscapeRoom.QuestObjects, asm: DebugStart.EscapeRoom}
+      data:
+        name: Purple has purple
+        invert: 0
+        dropZone: {fileID: 0}
+        targetColor: 2
+--- !u!114 &3773516317283836298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5306628589010644560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaf51fa8a4fa4a5dac96fb359c2480b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <ID>k__BackingField: Room2_DoorOpen
+  condition:
+    rid: 3383733212788555984
+  references:
+    version: 2
+    RefIds:
+    - rid: 3383733212788555984
+      type: {class: GroupCondition, ns: EscapeRoom.QuestLogic, asm: DebugStart.EscapeRoom}
+      data:
+        name: 
+        invert: 0
+        all: 0
+        conditions:
+        - rid: 3383733212788555990
+    - rid: 3383733212788555990
+      type: {class: CrystalSlot/CrystalSlotHasTargetColor, ns: EscapeRoom.QuestObjects, asm: DebugStart.EscapeRoom}
+      data:
+        name: Room1 slot is green
+        invert: 0
+        dropZone: {fileID: 0}
+        targetColor: 1
+--- !u!114 &3341873079699692502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5306628589010644560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaf51fa8a4fa4a5dac96fb359c2480b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <ID>k__BackingField: Room3_DoorOpen
+  condition:
+    rid: 3383733212788555979
+  references:
+    version: 2
+    RefIds:
+    - rid: 3383733212788555979
+      type: {class: GroupCondition, ns: EscapeRoom.QuestLogic, asm: DebugStart.EscapeRoom}
+      data:
+        name: 
+        invert: 0
+        all: 1
+        conditions:
+        - rid: 3383733212788555980
+        - rid: 3383733212788555986
+    - rid: 3383733212788555980
+      type: {class: StateConditionBool, ns: EscapeRoom.QuestLogic, asm: DebugStart.EscapeRoom}
+      data:
+        name: If fuseBox is on
+        invert: 0
+        stateDatabase: {fileID: 6290600445739874083}
+        targetStateId: FuseBoxIsOn
+        targetValue: 1
+    - rid: 3383733212788555986
+      type: {class: NetworkedDropZone/DropZoneEmpty, ns: EscapeRoom.Interactions, asm: DebugStart.EscapeRoom}
+      data:
+        name: Fuse slot not empty
+        invert: 1
+        dropZone: {fileID: 0}
 --- !u!1 &8835561842931123046
 GameObject:
   m_ObjectHideFlags: 0
@@ -55,6 +213,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6667456100690440035}
+  - component: {fileID: 566261482505479046}
+  - component: {fileID: 838956036608587757}
   m_Layer: 0
   m_Name: NetworkedStates
   m_TagString: Untagged
@@ -77,3 +237,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8640628693307562258}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &566261482505479046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8835561842931123046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 3162282708
+  InScenePlacedSourceGlobalObjectIdHash: 0
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 0
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 1
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
+--- !u!114 &838956036608587757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8835561842931123046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c62f2bb98e2341ef9daa603ac879f435, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startValue: 0
+  <ID>k__BackingField: FuseBoxIsOn

@@ -1,4 +1,5 @@
-﻿using Unity.Netcode;
+﻿using EscapeRoom.QuestLogic;
+using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Utilities.Internal;
 
@@ -92,6 +93,20 @@ namespace EscapeRoom.Interactions
                     objectToDrop.transform.position = point;
                 }
             }
+        }
+        
+        
+        /// <summary>
+        /// Condition that check if dropzone is empty or not
+        /// </summary>
+        [System.Serializable]
+        public class DropZoneEmpty: Condition
+        {
+            [SerializeField] 
+            [RequireInterface(typeof(IDropZoneInteractable))]
+            private Object dropZone;
+
+            public override bool IsTrue => ((IDropZoneInteractable)dropZone).Empty;
         }
     }
 }

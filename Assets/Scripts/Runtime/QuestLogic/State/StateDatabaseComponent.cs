@@ -19,8 +19,14 @@ namespace EscapeRoom.QuestLogic
         private List<Object> stateProviders;
 
         /// <inheritdoc/>
-        public IEnumerable<IStateProvider> States => stateProviders.OfType<IStateProvider>();
-        
+        public IEnumerable<IStateProvider> States
+        {
+            get
+            {
+                return stateProviders.OfType<IStateProvider>().ToList();
+            }
+        }
+
         /// <inheritdoc/>
         public IStateProvider GetStateProvider(string id)
         {
@@ -36,7 +42,6 @@ namespace EscapeRoom.QuestLogic
         /// <summary>
         /// Finds and adds all components that implement 
         /// </summary>
-        [Button("Detect providers")]
         public void FindChildrenStateProviders()
         {
             stateProviders = GetComponentsInChildren<IStateProvider>().OfType<Object>().ToList();
