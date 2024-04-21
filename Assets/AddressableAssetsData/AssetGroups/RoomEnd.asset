@@ -22,6 +22,46 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5dcae5adf53292945adef517afe8041e
+    m_Address: Assets/EscapeRoom/QuestObjects/Treasure chest closed/treasure_chest_closed.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8cef904e57048b2469ee73f5244c1eb6
+    m_Address: Assets/EscapeRoom/QuestObjects/Treasure chest closed/Materials and
+      textures/treasure_chest_normal.tga
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0aa2f7635a8139b4ebcd6c751a6eaa10
+    m_Address: Assets/EscapeRoom/QuestObjects/Treasure chest closed/Materials and
+      textures/treasure_chest_albedo.tga
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7da33b55ab5442040a3b9c05b1d862d9
+    m_Address: Assets/EscapeRoom/QuestObjects/Treasure chest closed/Materials and
+      textures/treasure_chest_metal+smoo.tga
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6af4edaf43f9adf4d8d44b37e8068f31
+    m_Address: Assets/EscapeRoom/QuestObjects/Treasure chest closed/Materials and
+      textures/treasure_chest_occlusion.tga
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b595eb91a4fcd554ab0ca2a779489650
+    m_Address: Assets/EscapeRoom/QuestObjects/Treasure chest closed/Materials and
+      textures/treasure_chest.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6eef872720cdc8049aa971a249922bcc
+    m_Address: Assets/EscapeRoom/QuestObjects/Treasure chest closed/FBX/treasure_chest_closed.FBX
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: c11cda07c67393c46ac72d4c13ad4b20, type: 2}
   m_SchemaSet:
