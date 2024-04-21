@@ -1,5 +1,6 @@
 ﻿using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit.Utilities.Internal;
 
 namespace EscapeRoom.Interactions
 {
@@ -22,19 +23,20 @@ namespace EscapeRoom.Interactions
         protected Transform attachPoint;
 
         [SerializeField]
+        [RequireInterface(typeof(IGrabInteractable))]
         [Tooltip("Objects the dropzone can accept. If empty, accepts all objects")]
-        protected NetworkedGrabbable[] targetObjects;
+        protected Object[] targetObjects;
         
         /// <inheritdoc/>
-        public virtual bool Empty => attachPoint.childCount == 0;
+        public virtual bool Empty => DroppedInteractable == null;
 
         /// <inheritdoc/>
-        public virtual IGrabInteractable DroppedInteractable => attachPoint.GetComponentInChildren<IGrabInteractable>();
+        public virtual IGrabInteractable DroppedInteractable => transform.GetComponentInChildren<IGrabInteractable>();
 
         /// <inheritdoc/>
         public virtual bool CanAccept(IGrabInteractable interactable)
         {
-            if(!Empty || interactable is not NetworkedGrabbable networkedGrabbable) // ignore not networked grabbable
+            if(!Empty) // ignore not networked grabbable
                 return false;
 
             if (targetObjects == null || targetObjects.Length == 0)
@@ -42,7 +44,7 @@ namespace EscapeRoom.Interactions
 
             foreach (var target in targetObjects)
             {
-                if (target == networkedGrabbable)
+                if ((IGrabInteractable)target == interactable)
                     return true;
             }
 
@@ -52,30 +54,38 @@ namespace EscapeRoom.Interactions
         /// <inheritdoc/>
         public virtual void TryDropInteractable(IGrabInteractable interactable, Vector3 point)
         {
-            if(!Empty || interactable is not NetworkedGrabbable networkedGrabbable) // ignore not networked grabbable
+            if (!Empty) // ignore not networked grabbable
                 return;
 
-            TryDropInteractableRpc(networkedGrabbable.NetworkBehaviourId, point);
+            if (interactable is NetworkedGrabInteractable networkedGrabbable)
+            {
+                TryDropInteractableRpc(networkedGrabbable.NetworkObject.NetworkObjectId, point);
+                return;
+            }
+            
+            interactable.Transform.parent = transform;
+            interactable.Transform.localPosition = transform.InverseTransformPoint(attachPoint.position);;
+            interactable.Transform.localRotation = Quaternion.Inverse(attachPoint.rotation) * transform.rotation;
         }
-        
+
         /// <summary>
         /// Call server to drop grabbable in this drop zone
         /// </summary>
         /// <param name="grabbableId">networked object id of the grabbable</param>
         /// <param name="point">drop position of the grabbable</param>
         [Rpc(SendTo.Server)]
-        public virtual void TryDropInteractableRpc(ushort grabbableId, Vector3 point)
+        public virtual void TryDropInteractableRpc(ulong grabbableId, Vector3 point)
         {
             NetworkManager.SpawnManager.SpawnedObjects.TryGetValue(grabbableId, out var objectToDrop);
-            if (objectToDrop == null || objectToDrop.transform.parent != null) return;
+            if (!objectToDrop)
+                return;
 
-            if (objectToDrop.TryGetComponent(out NetworkObject networkObject) 
-                && networkObject.TrySetParent(attachPoint))
+            if (objectToDrop.TrySetParent(transform))
             {
                 if (matchPosition)
                 {
-                    objectToDrop.transform.localPosition = Vector3.zero;
-                    objectToDrop.transform.localRotation = Quaternion.identity;
+                    objectToDrop.transform.localPosition = transform.InverseTransformPoint(attachPoint.position);;
+                    objectToDrop.transform.localRotation = Quaternion.Inverse(attachPoint.rotation) * transform.rotation;;
                 }
                 else
                 {

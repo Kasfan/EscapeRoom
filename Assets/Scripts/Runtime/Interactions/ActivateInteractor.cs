@@ -9,12 +9,12 @@ namespace EscapeRoom.Interactions
     public class ActivateInteractor: MonoBehaviour, IInteractor<IActivateInteractable>
     {
         [SerializeField]
-        private InputAction activateAction;
+        private InputActionReference activateAction;
         
         /// <inheritdoc/>
         public void ProcessInteraction(IActivateInteractable interactable)
         {
-            if (activateAction.triggered)
+            if (activateAction.action.triggered)
                 interactable.OnActivated();
         }
     }

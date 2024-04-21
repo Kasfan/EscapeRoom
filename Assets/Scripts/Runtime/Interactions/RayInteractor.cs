@@ -29,7 +29,7 @@ namespace EscapeRoom.Interactions
             activateInteractor = GetComponent<IInteractor<IActivateInteractable>>();
         }
 
-        private void FixedUpdate()
+        private void Update()
         {
             var (interactable, hitPoint) = CastRay();
 
@@ -39,8 +39,7 @@ namespace EscapeRoom.Interactions
                 return;
             }
             
-            if (interactable is IDropZoneInteractable dropZoneInteractable
-                && grabInteractor.Holding)
+            if (interactable is IDropZoneInteractable dropZoneInteractable)
             {
                 OnDropZoneInteractableHit(dropZoneInteractable, hitPoint);
                 return;
@@ -52,6 +51,8 @@ namespace EscapeRoom.Interactions
                 OnActivateInteractableHit(activateInteractable);
                 return;
             }
+
+            if (ui) ui.HoverText = "";
         }
 
         private void OnGrabInteractableHit(IGrabInteractable grabInteractable)
@@ -60,20 +61,32 @@ namespace EscapeRoom.Interactions
                 return;
             
             grabInteractor.ProcessInteraction(grabInteractable);
-            ui.HoverText = grabInteractable.InteractionTooltip;
+            if(ui) ui.HoverText = grabInteractable.InteractionTooltip;
         }
         
         private void OnDropZoneInteractableHit(IDropZoneInteractable dropZoneInteractable, Vector3 hitPoint)
         {
-            grabInteractor.ProcessInteraction(dropZoneInteractable,hitPoint);
-            if(dropZoneInteractable.CanAccept(grabInteractor.HoldingObject))
-                ui.HoverText = dropZoneInteractable.InteractionTooltip;
+            if (grabInteractor.Holding)
+            {
+                grabInteractor.ProcessInteraction(dropZoneInteractable,hitPoint);
+                if(ui && dropZoneInteractable.CanAccept(grabInteractor.HoldingObject))
+                    ui.HoverText = dropZoneInteractable.InteractionTooltip;
+                return;
+            }
+            
+            // if grab interactor can grab and drop zone contains object, treat it like ray hit the object
+            var grabInteractable = dropZoneInteractable.DroppedInteractable;
+            if (grabInteractable != null )
+            {
+                OnGrabInteractableHit(grabInteractable);
+            }
+
         }
         
         private void OnActivateInteractableHit(IActivateInteractable activateInteractable)
         {
             activateInteractor.ProcessInteraction(activateInteractable);
-            ui.HoverText = activateInteractable.InteractionTooltip;
+            if(ui) ui.HoverText = activateInteractable.InteractionTooltip;
         }
 
         /// <summary>
@@ -84,7 +97,7 @@ namespace EscapeRoom.Interactions
         {
             var rayTransform = rayOrigin == null ? transform : rayOrigin.transform;
             var rayDirection = rayTransform.forward;
-            Debug.DrawRay(transform.position, rayDirection * interactionDistance);
+            Debug.DrawRay(rayTransform.position, rayDirection * interactionDistance);
 
             if (Physics.Raycast(rayTransform.position, rayDirection, out var hit, interactionDistance, rayLayers))
                 return (hit.transform.GetComponent<IInteractable>(), hit.point);
