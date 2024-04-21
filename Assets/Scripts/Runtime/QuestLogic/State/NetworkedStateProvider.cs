@@ -29,20 +29,14 @@ namespace EscapeRoom.QuestLogic
         
         public override void OnNetworkSpawn()
         {
-            if (IsServer)
-            {
-                value.Value = startValue;
-                return;
-            }
-            
             value.OnValueChanged += OnValueChanged;
+            
+            if (IsServer)
+                value.Value = startValue;
         }
 
         public override void OnNetworkDespawn()
         {
-            if (!IsServer)
-                return;
-            
             value.OnValueChanged -= OnValueChanged;
         }
 

@@ -260,12 +260,12 @@ MonoBehaviour:
   PositionThreshold: 0.001
   RotAngleThreshold: 0.01
   ScaleThreshold: 0.01
-  UseQuaternionSynchronization: 0
-  UseQuaternionCompression: 0
+  UseQuaternionSynchronization: 1
+  UseQuaternionCompression: 1
   UseHalfFloatPrecision: 1
   InLocalSpace: 0
   Interpolate: 1
-  SlerpPosition: 0
+  SlerpPosition: 1
 --- !u!114 &651215106001372229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -278,9 +278,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 539ec15f322faee439a836cac3d4df29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fpvController: {fileID: 2557334630810133624}
-  characterController: {fileID: 1612193892884265771}
-  playerInput: {fileID: 4726814415760595776}
   m_CapsuleCollider: {fileID: 5388868541825572669}
 --- !u!143 &1612193892884265771
 CharacterController:
@@ -413,7 +410,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8953745578402582762}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 621567455fd1c4ceb811cc8a00b6a1a5, type: 3}
   m_Name: 

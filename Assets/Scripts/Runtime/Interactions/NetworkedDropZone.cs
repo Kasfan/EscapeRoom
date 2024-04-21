@@ -106,7 +106,16 @@ namespace EscapeRoom.Interactions
             [RequireInterface(typeof(IDropZoneInteractable))]
             private Object dropZone;
 
-            public override bool IsTrue => ((IDropZoneInteractable)dropZone).Empty;
+            public override bool IsTrue
+            {
+                get
+                {
+                    if (dropZone == null)
+                        return false;
+                    var empty = ((IDropZoneInteractable)dropZone).Empty;
+                    return invert? !empty: empty;
+                }
+            }
         }
     }
 }

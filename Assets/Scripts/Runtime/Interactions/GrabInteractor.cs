@@ -44,7 +44,7 @@ namespace EscapeRoom.Interactions
         /// Call server to grab an object
         /// </summary>
         /// <param name="grabbableId">networked object id of the grabbable</param>
-        [Rpc(SendTo.Owner)]
+        [Rpc(SendTo.Server)]
         public virtual void TryGrabRpc(ulong grabbableId)
         {
             NetworkManager.SpawnManager.SpawnedObjects.TryGetValue(grabbableId, out var objectToGrab);

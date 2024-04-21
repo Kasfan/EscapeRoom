@@ -25,6 +25,7 @@ namespace EscapeRoom.Interactions
         }
         
         /// <inheritdoc/>
+        [Rpc(SendTo.Server)]
         public override void TryDropInteractableRpc(ulong grabbableId, Vector3 point)
         {
             NetworkManager.SpawnManager.SpawnedObjects.TryGetValue(grabbableId, out var objectToDrop);

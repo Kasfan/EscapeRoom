@@ -133,7 +133,7 @@ MonoBehaviour:
   UseHalfFloatPrecision: 1
   InLocalSpace: 0
   Interpolate: 1
-  SlerpPosition: 0
+  SlerpPosition: 1
 --- !u!114 &8922654964692754285
 MonoBehaviour:
   m_ObjectHideFlags: 0

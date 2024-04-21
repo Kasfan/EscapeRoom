@@ -1726,6 +1726,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sci Fi Gates
       objectReference: {fileID: 0}
+    - target: {fileID: 4688345059886243594, guid: 7eac631add611d046ab010fccd81af5a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4688345059886465834, guid: 7eac631add611d046ab010fccd81af5a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20.381
