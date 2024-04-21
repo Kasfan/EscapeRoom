@@ -1726,6 +1726,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sci Fi Gates
       objectReference: {fileID: 0}
+    - target: {fileID: 4688345059886243594, guid: 7eac631add611d046ab010fccd81af5a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4688345059886465834, guid: 7eac631add611d046ab010fccd81af5a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20.381
@@ -1766,11 +1770,78 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7989282957896067275, guid: 7eac631add611d046ab010fccd81af5a, type: 3}
+      propertyPath: openOnStart
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4688345059886243594, guid: 7eac631add611d046ab010fccd81af5a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8195965972923282674}
   m_SourcePrefab: {fileID: 100100000, guid: 7eac631add611d046ab010fccd81af5a, type: 3}
+--- !u!114 &6516511910618979828 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7989282957896067275, guid: 7eac631add611d046ab010fccd81af5a, type: 3}
+  m_PrefabInstance: {fileID: 3796797870119712063}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8475976216590674485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c2d7f03f3ce420694b0dac5c493ff60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &8475976216590674485 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4688345059886243594, guid: 7eac631add611d046ab010fccd81af5a, type: 3}
+  m_PrefabInstance: {fileID: 3796797870119712063}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8195965972923282674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8475976216590674485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a820a2a2d46541b59b1f0afa163c6c17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateDatabase: {fileID: 0}
+  targetStateId: Room0_DoorsOpen
+  OnTrue:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6516511910618979828}
+        m_TargetAssemblyTypeName: EscapeRoom.QuestObjects.AnimatedDoor, DebugStart.EscapeRoom
+        m_MethodName: set_Open
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  OnFalse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6516511910618979828}
+        m_TargetAssemblyTypeName: EscapeRoom.QuestObjects.AnimatedDoor, DebugStart.EscapeRoom
+        m_MethodName: set_Open
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &8475976216590710293 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4688345059886465834, guid: 7eac631add611d046ab010fccd81af5a, type: 3}
@@ -2346,11 +2417,78 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7989282957896067275, guid: 7eac631add611d046ab010fccd81af5a, type: 3}
+      propertyPath: openOnStart
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4688345059886243594, guid: 7eac631add611d046ab010fccd81af5a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2623570508404720171}
   m_SourcePrefab: {fileID: 100100000, guid: 7eac631add611d046ab010fccd81af5a, type: 3}
+--- !u!114 &1548295438777609314 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7989282957896067275, guid: 7eac631add611d046ab010fccd81af5a, type: 3}
+  m_PrefabInstance: {fileID: 8908969963831182505}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4229825660403735459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c2d7f03f3ce420694b0dac5c493ff60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &4229825660403735459 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4688345059886243594, guid: 7eac631add611d046ab010fccd81af5a, type: 3}
+  m_PrefabInstance: {fileID: 8908969963831182505}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2623570508404720171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4229825660403735459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a820a2a2d46541b59b1f0afa163c6c17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateDatabase: {fileID: 0}
+  targetStateId: Room0_DoorsOpen
+  OnTrue:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1548295438777609314}
+        m_TargetAssemblyTypeName: EscapeRoom.QuestObjects.AnimatedDoor, DebugStart.EscapeRoom
+        m_MethodName: set_Open
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  OnFalse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1548295438777609314}
+        m_TargetAssemblyTypeName: EscapeRoom.QuestObjects.AnimatedDoor, DebugStart.EscapeRoom
+        m_MethodName: set_Open
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &4229825660403959683 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4688345059886465834, guid: 7eac631add611d046ab010fccd81af5a, type: 3}

@@ -1,0 +1,8 @@
+{
+  "GlobalObjectId_V1-2-d3ada964757ce454bb59a796cacb8fcd-1624856530-0": {
+    "GameObjectId": "GlobalObjectId_V1-2-d3ada964757ce454bb59a796cacb8fcd-1624856530-0",
+    "CommentText": "Due to issue with NetworkTransforms,\nthey can start as with \na parent Transfom.\nPut them in the scene root below \nthis section",
+    "AssetGUID": "d3ada964757ce454bb59a796cacb8fcd",
+    "UniqueItemID": "GlobalObjectId_V1-2-d3ada964757ce454bb59a796cacb8fcd-1624856530-0"
+  }
+}

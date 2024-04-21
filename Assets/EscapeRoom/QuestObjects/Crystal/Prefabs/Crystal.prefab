@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4897776596152486430}
   - component: {fileID: 3209657024027822921}
   - component: {fileID: 6007406373326210451}
+  - component: {fileID: 8922654964692754285}
   m_Layer: 0
   m_Name: Crystal
   m_TagString: Untagged
@@ -76,7 +77,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
@@ -93,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 0
+  GlobalObjectIdHash: 1236092376
   InScenePlacedSourceGlobalObjectIdHash: 0
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -132,7 +133,20 @@ MonoBehaviour:
   UseHalfFloatPrecision: 1
   InLocalSpace: 0
   Interpolate: 1
-  SlerpPosition: 0
+  SlerpPosition: 1
+--- !u!114 &8922654964692754285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3965949926490356618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e91443779ac74411afe794b95085480c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <InteractionTooltip>k__BackingField: Grab Crystal
 --- !u!1001 &6084668114907645792
 PrefabInstance:
   m_ObjectHideFlags: 0

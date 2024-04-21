@@ -25,7 +25,8 @@ namespace EscapeRoom.QuestObjects
         [SerializeField] 
         [Tooltip("Renderer of the crystal")]
         private Renderer graphics;
-
+        
+        public Color CurrentColor => color;
 
         private void Awake()
         {

@@ -55,5 +55,98 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: 5bfaf6b7d0928674cbb4e5f3a5e29083, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4687771838000271600}
+    - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: 5bfaf6b7d0928674cbb4e5f3a5e29083, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6682576235030697821}
+    - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: 5bfaf6b7d0928674cbb4e5f3a5e29083, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1397071056602358021}
   m_SourcePrefab: {fileID: 100100000, guid: 5bfaf6b7d0928674cbb4e5f3a5e29083, type: 3}
+--- !u!1 &7872879502804836077 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 5bfaf6b7d0928674cbb4e5f3a5e29083, type: 3}
+  m_PrefabInstance: {fileID: 2189869977516738532}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &4687771838000271600
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7872879502804836077}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 84096e56385116d47a4c31f74389c431, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6682576235030697821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7872879502804836077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a820a2a2d46541b59b1f0afa163c6c17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateDatabase: {fileID: 0}
+  targetStateId: FuseBoxIsOn
+  OnTrue:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1397071056602358021}
+        m_TargetAssemblyTypeName: Runtime.QuestObjects.AnimatedFuseBoxLever, DebugStart.EscapeRoom
+        m_MethodName: set_IsOn
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  OnFalse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1397071056602358021}
+        m_TargetAssemblyTypeName: Runtime.QuestObjects.AnimatedFuseBoxLever, DebugStart.EscapeRoom
+        m_MethodName: set_IsOn
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1397071056602358021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7872879502804836077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ddd77cbb4454d768acd5480386a607c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 4687771838000271600}
+  isOnPropertyName: IsOn

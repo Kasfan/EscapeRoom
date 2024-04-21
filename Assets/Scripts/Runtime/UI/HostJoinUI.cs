@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 namespace EscapeRoom.UI
 {
-    public class HostJoinUI : MonoBehaviour
+    public class HostJoinUI : NetworkBehaviour
     {
         [SerializeField] 
         private bool overrideEndpoint;
@@ -44,6 +44,12 @@ namespace EscapeRoom.UI
             startClientBtn.onClick.RemoveListener(StartClient);
         }
 
+        public override void OnNetworkSpawn()
+        {
+            base.OnNetworkSpawn();
+            ToggleMainMenuUI(false);
+        }
+
         void Start()
         {
             ToggleMainMenuUI(true);
@@ -59,12 +65,13 @@ namespace EscapeRoom.UI
 
         void StartHost()
         {
+            ipTextField.text = "0.0.0.0";
             if(overrideEndpoint)
                 SetUtpConnectionData();
             var result = NetworkManager.Singleton.StartHost();
             if (result)
             {
-                ToggleMainMenuUI(false);
+                Debug.Log($"Started host at {ipTextField.text}:{portTextField.text}");
             }
         }
 
@@ -75,18 +82,19 @@ namespace EscapeRoom.UI
             var result = NetworkManager.Singleton.StartClient();
             if (result)
             {
-                ToggleMainMenuUI(false);
+                Debug.Log($"Client connected to server at {ipTextField.text}:{portTextField.text}");
             }
         }
 
         void StartServer()
         {
+            ipTextField.text = "0.0.0.0";
             if(overrideEndpoint)
                 SetUtpConnectionData();
             var result = NetworkManager.Singleton.StartServer();
             if (result)
             {
-                ToggleMainMenuUI(false);
+                Debug.Log($"Started server at {ipTextField.text}:{portTextField.text}");
             }
         }
 
