@@ -59,6 +59,7 @@ namespace EscapeRoom.UI
 
         void StartHost()
         {
+            ipTextField.text = "0.0.0.0";
             if(overrideEndpoint)
                 SetUtpConnectionData();
             var result = NetworkManager.Singleton.StartHost();
@@ -81,6 +82,7 @@ namespace EscapeRoom.UI
 
         void StartServer()
         {
+            ipTextField.text = "0.0.0.0";
             if(overrideEndpoint)
                 SetUtpConnectionData();
             var result = NetworkManager.Singleton.StartServer();
