@@ -1,8 +1,7 @@
 {
   "dependencies": {
-    "com.nsubstitute.nsubstitute": "https://github.com/Kasfan/nsubstitute-unity3d.git",
     "com.jetbrains.riderflow": "2023.1.0-25",
-    "com.madsbangh.easybuttons": "1.3.0",
+    "com.nsubstitute.nsubstitute": "https://github.com/Kasfan/nsubstitute-unity3d.git",
     "com.unity.addressables": "1.21.20",
     "com.unity.cinemachine": "2.9.7",
     "com.unity.feature.development": "1.0.1",
@@ -53,14 +52,6 @@
       "url": "https://npm.pkg.jetbrains.space/public/p/jetbrains-gamedev/jetbrains-gamedev/",
       "scopes": [
         "com.jetbrains"
-      ]
-    },
-    {
-      "name": "package.openupm.com",
-      "url": "https://package.openupm.com",
-      "scopes": [
-        "com.madsbangh.easybuttons",
-        "com.openupm"
       ]
     }
   ]
